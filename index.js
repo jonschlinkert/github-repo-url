@@ -7,6 +7,13 @@
 
 const origin = require('remote-origin-url');
 const gitUrl = require('github-url-from-git');
+const log = require('verbalize');
 
 
-module.exports = gitUrl(origin.url());
+module.exports = (function() {
+  if (/\bhas not been defined\b/.test(origin.url())) {
+    log.warn("Can't calculate git-username. This probably means that a git remote origin doesn't exist.");
+    return '';
+  }
+  return gitUrl(origin.url());
+})();

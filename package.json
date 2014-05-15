@@ -1,7 +1,7 @@
 {
   "name": "github-repo-url",
   "description": "Extract a GitHub project's URL from its git repository URL.",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/jonschlinkert/github-repo-url",
   "author": {
     "name": "Jon Schlinkert",
@@ -39,7 +39,8 @@
     "verb": "~0.2.0"
   },
   "dependencies": {
+    "github-url-from-git": "~1.1.1",
     "remote-origin-url": "~0.2.1",
-    "github-url-from-git": "~1.1.1"
+    "verbalize": "^0.1.2"
   }
 }
